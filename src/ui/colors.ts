@@ -12,7 +12,7 @@ export enum Color {
   // Context colors
   Errors = "#FF5154",
   Light = "#AFB2B6",
-  White = "FFFFFF ",
+  White = "#FFFFFF ",
 
   // Tertiary Colors
   Green = "#00A340",

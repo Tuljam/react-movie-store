@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Color } from "../../ui";
+import { Media } from "../../ui/media";
 
 export const NavStyled = styled.nav`
   display: flex;
@@ -24,4 +25,13 @@ export const Block2Styled = styled.div`
   height: 33%;
 
   background-color: ${Color.Yellow};
+`;
+
+export const TitleStyled = styled.h1`
+  color: ${Color.White};
+  font-size: 26px;
+
+  ${Media.Tablet} {
+    color: ${Color.Green};
+  }
 `;
