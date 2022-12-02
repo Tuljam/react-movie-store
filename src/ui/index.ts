@@ -1,2 +1,4 @@
 import { Color } from "./colors";
-export { Color };
+import { H1 } from "./typography";
+
+export { Color, H1 };
