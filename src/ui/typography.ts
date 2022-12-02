@@ -1,5 +1,6 @@
 import { css } from "styled-components";
 import { Color } from "./colors";
+import { Media } from "./media";
 
 export const H1 = css`
   // font-family: "Exo 2"; - установить нужный
@@ -9,7 +10,7 @@ export const H1 = css`
   line-height: 60px;
   color: ${Color.Graphite};
 
-  @media (max-weight: 568px) {
+  ${Media.Tablet} {
     font-size: 32px;
     line-height: 48px;
   }
