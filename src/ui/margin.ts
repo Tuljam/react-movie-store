@@ -1,5 +1,5 @@
 interface IMargin {
-  [key: number]: {
+  [key: string]: {
     lg: string;
     md?: string;
     sm: string;
@@ -7,47 +7,47 @@ interface IMargin {
 }
 
 export const Margin: IMargin = {
-  1: {
+  Level_1: {
     lg: "64px",
     md: "56px",
     sm: "48px",
   },
-  2: {
+  Level_2: {
     lg: "56px",
     md: "48px",
     sm: "40px",
   },
-  3: {
+  Level_3: {
     lg: "48px",
     md: "48px",
     sm: "40px",
   },
-  4: {
+  Level_4: {
     lg: "40px",
     md: "40px",
     sm: "32px",
   },
-  5: {
+  Level_5: {
     lg: "32px",
     md: "32px",
     sm: "24px",
   },
-  6: {
+  Level_6: {
     lg: "24px",
     md: "24px",
     sm: "20px",
   },
-  7: {
+  Level_7: {
     lg: "20px",
     md: "20px",
     sm: "16px",
   },
-  8: {
+  Level_8: {
     lg: "16x",
     md: "16px",
     sm: "16px",
   },
-  9: {
+  Level_9: {
     lg: "8x",
     md: "8px",
     sm: "8px",

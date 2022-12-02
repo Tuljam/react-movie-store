@@ -16,7 +16,7 @@ export const BlockStyled = styled.div`
   width: 80%;
   height: 33%;
 
-  background-color: ${Color.Orange};
+  background-color: ${Color.Primary_BG};
 `;
 
 export const Block2Styled = styled.div`
@@ -24,11 +24,11 @@ export const Block2Styled = styled.div`
   width: 80%;
   height: 33%;
 
-  background-color: ${Color.Yellow};
+  background-color: ${Color.Primary_BG};
 `;
 
 export const TitleStyled = styled.h1`
-  color: ${Color.White};
+  color: ${Color.Primary_TEXT};
   font-size: 26px;
 
   ${Media.Tablet} {

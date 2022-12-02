@@ -1,7 +1,9 @@
 import { resetCSS } from "./resetCSS";
 import { Color } from "./colors";
-import { H1 } from "./typography";
 import { Media } from "./media";
 import { GlobalStyles } from "./globalStyles";
+import { Margin } from "./margin";
 
-export { resetCSS, Color, H1, Media, GlobalStyles };
+export * from "./typography";
+
+export { resetCSS, Color, Media, GlobalStyles, Margin };

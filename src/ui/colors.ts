@@ -1,4 +1,7 @@
 export enum Color {
+  // theme color
+  Primary_TEXT = "var(--primary-text)",
+  Primary_BG = "var(--primary-bg)",
   // system color
   Primary = "#7B61FF",
   Primary_light = "#917CFF",
