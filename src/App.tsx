@@ -1,19 +1,33 @@
 import { useEffect, useState } from "react";
 import { Nav } from "./components/Nav/Nav";
-import { MoviesApi, moviesAPI } from "./servises/MoviesApi";
+import { moviesAPI } from "./servises/MoviesApi";
+import { IFilm } from "./types";
 
 type ThemeType = "dark" | "light";
 
 export const App = () => {
-  const [movies, setMovies] = useState({});
+  // API
+  console.log(moviesAPI.getFilm(""));
+
+  // const [countries, setCountries] = useState<ICountry[]>([]);
 
   useEffect(() => {
-    moviesAPI.getFilm("").then(setMovies);
-  }, [movies]);
+    //получим все страны
+    // moviesAPI.getAll().then(setCountries);
+    // получим страны по региону
+    //   moviesAPI.getCountriesByRegion("Oceania").then(setCountries);
+  }, []);
 
-  console.log(moviesAPI.getFilm("  ")); //-нет ключа,как его добавить
+  // console.log(moviesAPI.getFilm("  ")); //-нет ключа,как его добавить
+
+  // const [movies, setMovies] = useState<IFilm[]>([]);
+
+  // useEffect(() => {
+  //   moviesAPI.getFilm("ocean").then(setMovies);
+  // }, []);
 
   // theme
+
   const [theme, setTheme] = useState<ThemeType>("dark");
   const handleTheme = () => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
@@ -26,42 +40,16 @@ export const App = () => {
   return (
     <div>
       App
-      <Nav />
-      <ul>
-        {movies.map((movie) => (
-          <li>{movie.title}</li>
+      <Nav /> <button onClick={handleTheme}>Theme</button>
+      {/* <ul>
+        {countries.map((c) => (
+          <li>
+            {c.region}
+            {c.subregion}
+            {c.area}
+          </li>
         ))}
-      </ul>
-      <button onClick={handleTheme}>Theme</button>
+      </ul> */}
     </div>
   );
 };
-
-// interface IMovie {
-
-//  title: string,
-//   year: number,
-//   id: number,
-// // }
-// export const App = () => {
-//   const [movies, setMovies] = useState<any>();
-
-//   useEffect(() => {
-//     fetch("https://www.omdbapi.com/?apikey=9adb2a81&s=MEN")
-//       .then((data) => data.json())
-//       .then(setMovies);
-//     //.then((json) => console.log(json));
-//   }, []);
-
-//   return (
-//     <div>
-//       App1
-//       <p>Список</p>
-//       <ul>
-//         {movies.map((movie: any) => {
-//           return <li>{movie.title}</li>;
-//         })}
-//       </ul>
-//     </div>
-//   );
-// };

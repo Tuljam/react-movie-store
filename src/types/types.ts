@@ -1,7 +1,11 @@
-export interface IRating {
-  Source: string;
-  Value: string;
+export interface IFilm {
+  Title: string;
+  Year: string;
+  imdbID: string;
+  Type: string;
+  Poster: string;
 }
+
 export interface IFilmInfoAPI {
   Title: string;
   Year: string;
@@ -27,10 +31,11 @@ export interface IFilmInfoAPI {
   BoxOffice: string;
 }
 
-export interface IFilm {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
+export interface IRating {
+  Source: string;
+  Value: string;
+}
+
+export interface ISearch {
+  Search: IFilm[];
 }
