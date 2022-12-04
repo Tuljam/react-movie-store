@@ -19,7 +19,6 @@ export class MoviesApi {
     const params = {
       i: id,
       t: "title",
-      plot: "full",
     };
     const { data } = await this.API.get<IFilmInfoAPI>("", { params });
     return data;
