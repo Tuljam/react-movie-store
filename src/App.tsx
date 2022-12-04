@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import { Nav } from "./components/Nav/Nav";
-import { moviesAPI } from "./servises/MoviesApi";
+import { ICountry, moviesAPI } from "./servises/MoviesApi";
 import { IFilm } from "./types";
 
 type ThemeType = "dark" | "light";
 
 export const App = () => {
   // API
-  console.log(moviesAPI.getFilm(""));
+  // console.log(moviesAPI.getFilm(""));
 
-  // const [countries, setCountries] = useState<ICountry[]>([]);
+  const [countries, setCountries] = useState<ICountry[]>([]);
 
   useEffect(() => {
     //получим все страны
-    // moviesAPI.getAll().then(setCountries);
+    moviesAPI.getAll().then(setCountries);
     // получим страны по региону
-    //   moviesAPI.getCountriesByRegion("Oceania").then(setCountries);
+    // moviesAPI.getCountriesByRegion("Oceania").then(setCountries);
   }, []);
 
   // console.log(moviesAPI.getFilm("  ")); //-нет ключа,как его добавить
@@ -41,7 +41,7 @@ export const App = () => {
     <div>
       App
       <Nav /> <button onClick={handleTheme}>Theme</button>
-      {/* <ul>
+      <ul>
         {countries.map((c) => (
           <li>
             {c.region}
@@ -49,7 +49,7 @@ export const App = () => {
             {c.area}
           </li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };
