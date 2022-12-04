@@ -7,46 +7,67 @@ export interface ICountry {
   area: number;
 }
 class MoviesApi {
-  private readonly BASE_URL = "https://restcountries.com/v3.1/";
-  // private readonly BASE_URL = process.env.REACT_APP_BASE_URL_COUNTRIES; //ПОЧЕМУ НЕ РАБОТАЕТ????
+  private readonly BASE_URL = process.env.REACT_APP_BASE_URL;
+  private readonly keyAPI = process.env.REACT_APP_API_KEY;
+
+  // private readonly BASE_URL = "https://restcountries.com/v3.1/";
+  // private readonly BASE_URL = process.env.REACT_APP_BASE_URL_COUNTRIES;
 
   private readonly API = axios.create({
     baseURL: this.BASE_URL,
-    // params: {
-    //   apikey: this.keyAPI,
-    // },
+    params: {
+      apikey: this.keyAPI,
+    },
   });
 
-  //
-
-  private readonly ENDPOINT = {
-    all: "all",
-    region: "region",
-    subregion: "subregion",
-  };
-
-  public async getAll() {
+  public async getFilm(id: string) {
     const params = {
-      fields: ["region", "subregion", "area"].join(","),
+      i: id,
+      t: "title",
     };
-
-    const { data } = await this.API.get<ICountry[]>(this.ENDPOINT.all, {
-      params,
-    });
-
+    const { data } = await this.API.get<IFilmInfoAPI>("", { params });
     return data;
   }
-
-  public async getCountriesByRegion(region: string) {
+  public async getSearchByFilms(name: string, type: string, year?: number) {
     const params = {
-      fields: ["region", "subregion", "area"].join(","),
+      s: name,
+      type: type,
+      y: year,
     };
-    const { data } = await this.API.get<ICountry[]>(
-      `${this.ENDPOINT.region}/${region}`,
-      { params }
-    );
-
-    return data;
+    const {
+      data: { Search },
+    } = await this.API.get<ISearch>("", { params });
+    return Search;
   }
+
+  // private readonly ENDPOINT = {
+  //   all: "all",
+  //   region: "region",
+  //   subregion: "subregion",
+  // };
+
+  // public async getAll() {
+  //   const params = {
+  //     fields: ["region", "subregion", "area"].join(","),
+  //   };
+
+  //   const { data } = await this.API.get<ICountry[]>(this.ENDPOINT.all, {
+  //     params,
+  //   });
+
+  //   return data;
+  // }
+
+  // public async getCountriesByRegion(region: string) {
+  //   const params = {
+  //     fields: ["region", "subregion", "area"].join(","),
+  //   };
+  //   const { data } = await this.API.get<ICountry[]>(
+  //     `${this.ENDPOINT.region}${region}`,
+  //     { params }
+  //   );
+
+  //   return data;
+  // }
 }
 export const moviesAPI = new MoviesApi();

@@ -7,24 +7,22 @@ type ThemeType = "dark" | "light";
 
 export const App = () => {
   // API
-  // console.log(moviesAPI.getFilm(""));
+  console.log(moviesAPI.getFilm("id"));
 
-  const [countries, setCountries] = useState<ICountry[]>([]);
-
-  useEffect(() => {
-    //получим все страны
-    moviesAPI.getAll().then(setCountries);
-    // получим страны по региону
-    // moviesAPI.getCountriesByRegion("Oceania").then(setCountries);
-  }, []);
-
-  // console.log(moviesAPI.getFilm("  ")); //-нет ключа,как его добавить
-
-  // const [movies, setMovies] = useState<IFilm[]>([]);
+  // const [countries, setCountries] = useState<ICountry[]>([]);
 
   // useEffect(() => {
-  //   moviesAPI.getFilm("ocean").then(setMovies);
+  //получим все страны
+  // moviesAPI.getAll().then(setCountries);
+  // получим страны по региону
+  // moviesAPI.getCountriesByRegion("Oceania").then(setCountries);
   // }, []);
+
+  const [movies, setMovies] = useState<IFilm[]>([]);
+
+  useEffect(() => {
+    moviesAPI.getFilm("id").then(setMovies);
+  }, []);
 
   // theme
 
@@ -41,7 +39,7 @@ export const App = () => {
     <div>
       App
       <Nav /> <button onClick={handleTheme}>Theme</button>
-      <ul>
+      {/* <ul>
         {countries.map((c) => (
           <li>
             {c.region}
@@ -49,7 +47,7 @@ export const App = () => {
             {c.area}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 };
