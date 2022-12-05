@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { MovieList } from "./components/MovieList/MovieList";
+import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
+import { useInput } from "./hooks/useInput";
 import { moviesAPI } from "./servises/MoviesApi";
 import { IMovie } from "./types";
 
@@ -10,6 +11,8 @@ export const App = () => {
   // API
   const [movies, setMovies] = useState<IMovie[]>([]);
   console.log(moviesAPI.getFilm("Title"));
+  const search = useInput();
+
   useEffect(() => {
     moviesAPI.getSearchByFilms("ocean", "movie").then(setMovies);
   }, []);
@@ -28,13 +31,8 @@ export const App = () => {
   return (
     <div>
       App
-      <MovieList movies={movies} />
       {/* <Nav /> <button onClick={handleTheme}>Theme</button> */}
-      <ul>
-        {movies.map((m) => (
-          <li>{m.Title}</li>
-        ))}
-      </ul>
+      <MoviesList movies={movies} />
     </div>
   );
 };
