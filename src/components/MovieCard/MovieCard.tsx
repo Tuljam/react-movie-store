@@ -5,7 +5,7 @@ interface IProps {
   title: string;
   img: string;
 }
-export const MovieCard = ({ id, title, img }: IProps) => {
+export const MovieCard = ({ title, img }: IProps) => {
   return (
     <li>
       <h2>{title}</h2>

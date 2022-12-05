@@ -11,12 +11,11 @@ export const App = () => {
   // API
   const [movies, setMovies] = useState<IMovie[]>([]);
   console.log(moviesAPI.getFilm("Title"));
-  const search = useInput();
 
   useEffect(() => {
-    moviesAPI.getSearchByFilms("ocean", "movie").then(setMovies);
+    moviesAPI.getSearchByFilms("sun", "movie").then(setMovies);
   }, []);
-
+  console.log(moviesAPI.getSearchByFilms("sun", "movie"));
   // theme
 
   const [theme, setTheme] = useState<ThemeType>("dark");
