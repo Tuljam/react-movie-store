@@ -1,27 +1,17 @@
 import { useEffect, useState } from "react";
+import { MovieList } from "./components/MovieList/MovieList";
 import { Nav } from "./components/Nav/Nav";
-import { ICountry, moviesAPI } from "./servises/MoviesApi";
-import { IFilm } from "./types";
+import { moviesAPI } from "./servises/MoviesApi";
+import { IMovie } from "./types";
 
 type ThemeType = "dark" | "light";
 
 export const App = () => {
   // API
-  console.log(moviesAPI.getFilm("id"));
-
-  // const [countries, setCountries] = useState<ICountry[]>([]);
-
-  // useEffect(() => {
-  //получим все страны
-  // moviesAPI.getAll().then(setCountries);
-  // получим страны по региону
-  // moviesAPI.getCountriesByRegion("Oceania").then(setCountries);
-  // }, []);
-
-  const [movies, setMovies] = useState<IFilm[]>([]);
-
+  const [movies, setMovies] = useState<IMovie[]>([]);
+  console.log(moviesAPI.getFilm("Title"));
   useEffect(() => {
-    moviesAPI.getFilm("id").then(setMovies);
+    moviesAPI.getSearchByFilms("ocean", "movie").then(setMovies);
   }, []);
 
   // theme
@@ -38,16 +28,13 @@ export const App = () => {
   return (
     <div>
       App
-      <Nav /> <button onClick={handleTheme}>Theme</button>
-      {/* <ul>
-        {countries.map((c) => (
-          <li>
-            {c.region}
-            {c.subregion}
-            {c.area}
-          </li>
+      <MovieList movies={movies} />
+      {/* <Nav /> <button onClick={handleTheme}>Theme</button> */}
+      <ul>
+        {movies.map((m) => (
+          <li>{m.Title}</li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 };
