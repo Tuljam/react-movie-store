@@ -1,11 +1,18 @@
-export interface IMovie {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
-}
+// export interface IMovie {
+//   Title: string;
+//   Year: string;
+//   imdbID: string;
+//   Type: string;
+//   Poster: string;
+// }
 
+export interface IMovie {
+  t: string;
+  y: string;
+  i: string;
+  type: string;
+  poster: string;
+}
 export interface IMovieInfoAPI {
   Title: string;
   Year: string;

@@ -2,20 +2,25 @@ import { useEffect, useState } from "react";
 import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
 import { useInput } from "./hooks/useInput";
-import { moviesAPI } from "./servises/MoviesApi";
+import { moviesApi } from "./servises";
+
 import { IMovie } from "./types";
 
 type ThemeType = "dark" | "light";
 
 export const App = () => {
   // API
-  const [movies, setMovies] = useState<IMovie[]>([]);
-  console.log(moviesAPI.getFilm("Title"));
+
+  const [movies, setMovies] = useState<IMovie>();
 
   useEffect(() => {
-    moviesAPI.getSearchByFilms("sun", "movie").then(setMovies);
+    moviesApi.getMovies("id").then((movies) => {
+      console.log(movies);
+      setMovies(movies as any);
+    });
   }, []);
-  console.log(moviesAPI.getSearchByFilms("sun", "movie"));
+
+  console.log(moviesApi);
   // theme
 
   const [theme, setTheme] = useState<ThemeType>("dark");
@@ -31,7 +36,7 @@ export const App = () => {
     <div>
       App
       {/* <Nav /> <button onClick={handleTheme}>Theme</button> */}
-      <MoviesList movies={movies} />
+      {/* <MoviesList movies={movies} /> */}
     </div>
   );
 };
