@@ -1,17 +1,18 @@
-// export interface IMovie {
-//   Title: string;
-//   Year: string;
-//   imdbID: string;
-//   Type: string;
-//   Poster: string;
-// }
-
 export interface IMovie {
-  t: string;
-  y: string;
-  i: string;
+  title: string;
+  year: string;
+  // imdbID: string;
+  id: string;
   type: string;
   poster: string;
+}
+export interface IMovieAPI {
+  Title: string;
+  Year: string;
+  // imdbID: string;
+  id: string;
+  Type: string;
+  Poster: string;
 }
 export interface IMovieInfoAPI {
   Title: string;
@@ -32,7 +33,8 @@ export interface IMovieInfoAPI {
   Metascore: string;
   imdbRating: string;
   imdbVotes: string;
-  imdbID: string;
+  // imdbID: string;
+  id: string;
   Type: string;
   DVD: string;
   BoxOffice: string;
@@ -43,6 +45,8 @@ export interface IRating {
   Value: string;
 }
 
-export interface ISearch {
-  Search: IMovie[];
+export interface IDataAPI {
+  Search: IMovieAPI[];
+  result: string;
+  Response: string;
 }

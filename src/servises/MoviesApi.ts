@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IMovieInfoAPI, ISearch } from "../types/types";
+import { IDataAPI, IMovieInfoAPI } from "../types/types";
 
 class MoviesApi {
   private readonly BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -18,6 +18,16 @@ class MoviesApi {
       plot: "full",
     };
     const { data } = await this.API.get<IMovieInfoAPI[]>("", { params });
+    return data;
+  }
+
+  public async getSearchMovies(name: string, type: string, year?: number) {
+    const params = {
+      s: name,
+      type: type,
+      y: year,
+    };
+    const { data } = await this.API.get<IDataAPI>("", { params });
     return data;
   }
 }
