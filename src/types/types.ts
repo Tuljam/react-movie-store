@@ -1,16 +1,14 @@
 export interface IMovie {
   title: string;
   year: string;
-  // imdbID: string;
-  id: string;
+  imdbID: string;
   type: string;
   poster: string;
 }
 export interface IMovieAPI {
   Title: string;
   Year: string;
-  // imdbID: string;
-  id: string;
+  imdbID: string;
   Type: string;
   Poster: string;
 }
@@ -33,8 +31,7 @@ export interface IMovieInfoAPI {
   Metascore: string;
   imdbRating: string;
   imdbVotes: string;
-  // imdbID: string;
-  id: string;
+  imdbID: string;
   Type: string;
   DVD: string;
   BoxOffice: string;
@@ -47,6 +44,6 @@ export interface IRating {
 
 export interface IDataAPI {
   Search: IMovieAPI[];
-  result: string;
+  totalResult: string;
   Response: string;
 }

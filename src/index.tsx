@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
 import { App } from "./App";
+import { store } from "./store/store";
 import { GlobalStyles } from "./ui/globalStyles";
 
 const root = ReactDOM.createRoot(
@@ -9,6 +11,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <>
     <GlobalStyles />
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </>
 );

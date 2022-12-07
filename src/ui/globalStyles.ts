@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
 ${resetCSS};
 
 html {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-style: normal;
   }
 html[theme="dark"] {

@@ -23,7 +23,6 @@ export const App = () => {
   //   });
   // }, []);
 
-  // console.log(moviesApi);
   const [movies, setMovies] = useState<IMovie[]>([]);
   const search = useInput();
   useEffect(() => {
