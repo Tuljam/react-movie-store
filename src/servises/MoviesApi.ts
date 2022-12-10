@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IDataAPI, IMovieInfoAPI } from "../types/types";
+import { IMovieInfoAPI, ResponseAPI } from "../types/types";
 
 class MoviesApi {
   private readonly BASE_URL = process.env.REACT_APP_BASE_URL;
@@ -27,7 +27,7 @@ class MoviesApi {
       type: type,
       y: year,
     };
-    const { data } = await this.API.get<IDataAPI>("", { params });
+    const { data } = await this.API.get<ResponseAPI>("", { params });
     return data;
   }
 }

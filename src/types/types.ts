@@ -42,7 +42,7 @@ export interface IRating {
   Value: string;
 }
 
-export interface IDataAPI {
+export interface ResponseAPI {
   Search: IMovieAPI[];
   totalResult: string;
   Response: string;
