@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
 import { Search } from "./components/Search/Search";
@@ -11,6 +12,8 @@ import { IMovie } from "./types";
 type ThemeType = "dark" | "light";
 
 export const App = () => {
+  const { name, email, isAuth } = useSelector((state: any) => state.user);
+
   // API
 
   // поиск по ID
@@ -48,10 +51,9 @@ export const App = () => {
 
   return (
     <div>
-      App
       <Search {...search} />
-      {/* <Nav /> <button onClick={handleTheme}>Theme</button> */}
-      {/* <MoviesList movies={movies} /> */}
+      <Nav /> <button onClick={handleTheme}>Theme</button>
+      <MoviesList movies={movies} />
     </div>
   );
 };

@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { Media } from "../../ui";
 
-import { Block2Styled, BlockStyled, NavStyled, TitleStyled } from "./styles";
+import { NavStyled, SubTitleStyled, TextStyled, TitleStyled } from "./styles";
 
 export const Nav = () => {
+  const { name, email, isAuth } = useSelector((state: any) => state.user);
   return (
     <NavStyled>
-      {" "}
-      nav
-      <BlockStyled>
-        <TitleStyled>block</TitleStyled>
-      </BlockStyled>
+      <TitleStyled>Имя:{name}</TitleStyled>
+      <SubTitleStyled>Email: {email}</SubTitleStyled>
+      <TextStyled>
+        {" "}
+        {isAuth ? <span>Logged</span> : <span>Not logged in</span>}
+      </TextStyled>
     </NavStyled>
   );
 };

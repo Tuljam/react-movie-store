@@ -8,30 +8,35 @@ export const NavStyled = styled.nav`
   flex-direction: column;
   width: 80%;
   height: 200px;
-  background-color: ${Color.Errors};
-`;
-
-export const BlockStyled = styled.div`
-  align-items: center;
-  width: 80%;
-  height: 33%;
-
   background-color: ${Color.Primary_BG};
 `;
 
 export const Block2Styled = styled.div`
   align-items: center;
   width: 80%;
-  height: 33%;
+  height: 50%;
 
   background-color: ${Color.Primary_BG};
 `;
 
-export const TitleStyled = styled.h1`
+export const TitleStyled = styled.h3`
   color: ${Color.Primary_TEXT};
   font-size: 26px;
 
   ${Media.Tablet} {
     color: ${Color.Green};
   }
+`;
+export const SubTitleStyled = styled.h4`
+  color: ${Color.Primary_TEXT};
+  font-size: 20px;
+
+  ${Media.Tablet} {
+    color: ${Color.Errors};
+  }
+`;
+export const TextStyled = styled.p`
+  padding: 5px;
+  color: ${Color.Primary_light};
+  font-size: 20px;
 `;
