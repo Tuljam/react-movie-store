@@ -7,12 +7,13 @@ interface IProps {
 export const MoviesList = ({ movies }: IProps) => {
   return (
     <ul>
-      {movies.map(({ imdbID, title, poster }) => (
+      {movies.map(({ imdbID, title, poster, genre }) => (
         <MovieCard
           key={imdbID}
           id={imdbID}
           title={title}
           img={poster}
+          genre={genre}
         ></MovieCard>
       ))}
     </ul>

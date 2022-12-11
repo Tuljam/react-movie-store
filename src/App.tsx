@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
 import { Search } from "./components/Search/Search";
 import { useInput } from "./hooks/useInput";
 import { moviesApi } from "./servises";
 import { modificationMovies } from "./servises/mappers/modificationMovies";
+import { useAppDispatch, useAppSelector } from "./store/hooks/hooks";
+import { getUser } from "./store/selectors/useeSelectors";
+import { setUserName, toggleAuth } from "./store/slices/userSlice";
 
 import { IMovie } from "./types";
 
 type ThemeType = "dark" | "light";
 
 export const App = () => {
-  const { name, email, isAuth } = useSelector((state: any) => state.user);
+  const { name, email, isAuth } = useAppSelector(getUser);
+  const dispatch = useAppDispatch();
+
+  const handleAuth = () => {
+    dispatch(toggleAuth());
+  };
 
   // API
 
@@ -30,7 +37,7 @@ export const App = () => {
   const search = useInput();
   useEffect(() => {
     moviesApi
-      .getSearchMovies("ocean", "movie")
+      .getSearchMovies("ocean", "movie", "Document")
       .then((data) => {
         console.log(data);
         return modificationMovies(data.Search);
@@ -52,7 +59,10 @@ export const App = () => {
   return (
     <div>
       <Search {...search} />
-      <Nav /> <button onClick={handleTheme}>Theme</button>
+      <Nav />
+      <button onClick={handleTheme}>Theme</button>
+
+      <button onClick={handleAuth}>toggle Auth</button>
       <MoviesList movies={movies} />
     </div>
   );

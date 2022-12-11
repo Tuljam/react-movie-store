@@ -21,11 +21,17 @@ class MoviesApi {
     return data;
   }
 
-  public async getSearchMovies(name: string, type: string, year?: number) {
+  public async getSearchMovies(
+    name: string,
+    type: string,
+    genre: string,
+    year?: number
+  ) {
     const params = {
       s: name,
       type: type,
       y: year,
+      g: genre,
     };
     const { data } = await this.API.get<ResponseAPI>("", { params });
     return data;

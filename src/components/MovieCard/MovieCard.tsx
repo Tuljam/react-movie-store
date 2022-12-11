@@ -4,12 +4,14 @@ interface IProps {
   id: string;
   title: string;
   img: string;
+  genre: string;
 }
-export const MovieCard = ({ title, img }: IProps) => {
+export const MovieCard = ({ title, img, genre }: IProps) => {
   return (
     <li>
       <h2>{title}</h2>
-      <img src={img} alt="" />
+      <h3>{genre}</h3>
+      <img src={img} alt={title} />
     </li>
   );
 };
