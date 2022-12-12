@@ -1,6 +1,7 @@
 import { ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
 import { setUserName } from "../../store/slices/userSlice";
+import { SearchStyled } from "./styles";
 
 interface IProps {
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
@@ -12,10 +13,10 @@ export const Search = ({ onChange, value }: IProps) => {
     dispatch(setUserName(event.target.value));
   };
   return (
-    <input
+    <SearchStyled
       onChange={handleName}
-      type="text"
-      // placeholder="Search"
+      type="search"
+      placeholder="Search"
       // value={value}
     />
   );
