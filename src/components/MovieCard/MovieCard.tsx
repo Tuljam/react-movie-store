@@ -1,5 +1,5 @@
 import React from "react";
-import { MovieCardStyled, Title, Image } from "./syles";
+import { MovieCardStyled, Image, SubTitle, Title } from "./syles";
 
 interface IProps {
   id: string;
@@ -15,7 +15,7 @@ export const MovieCard = ({ id, title, img, genre, year }: IProps) => {
       <Title>
         {title}, {year}
       </Title>
-      <Title>{genre}</Title>
+      <SubTitle>{genre}</SubTitle>
     </MovieCardStyled>
   );
 };

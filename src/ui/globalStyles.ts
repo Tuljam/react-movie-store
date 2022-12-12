@@ -25,6 +25,3 @@ export const AppStyled = styled.div`
   display: grid;
   background: ${Color.Primary_BG};
 `;
-const Title = styled.h1`
-  color: ${Color.Primary_TEXT};
-`;

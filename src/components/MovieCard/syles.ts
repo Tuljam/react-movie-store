@@ -29,11 +29,30 @@ export const Image = styled.img`
     height: 365px;
   }
 `;
-export const Title = styled.h6`
+
+export const Title = styled.h5`
+  color: ${Color.Primary_TEXT};
   ${typography.s2};
   transition: 0.5s color ease-in-out;
   &:hover {
     color: ${Color.Green};
     cursor: pointer;
   }
+
+  ${Media.Tablet} {
+    color: ${Color.Green};
+  }
+`;
+export const SubTitle = styled.h6`
+  color: ${Color.Primary_TEXT};
+  ${typography.s3};
+
+  ${Media.Tablet} {
+    color: ${Color.Errors};
+  }
+`;
+export const Text = styled.p`
+  padding: 5px;
+  color: ${Color.Primary_light};
+  ${typography.s3};
 `;
