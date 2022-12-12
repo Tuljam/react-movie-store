@@ -21,12 +21,10 @@ html[theme="light"] {
 
   }`;
 
-export const AppWrapper = styled.div`
-  // color: ;
-  // background-color: ;
-
-  padding: 60px;
-  padding-top: 40px;
-  display: flex;
-  gap: 146px;
+export const AppStyled = styled.div`
+  display: grid;
+  background: ${Color.Primary_BG};
+`;
+const Title = styled.h1`
+  color: ${Color.Primary_TEXT};
 `;

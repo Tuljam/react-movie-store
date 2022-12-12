@@ -11,15 +11,7 @@ export const NavStyled = styled.nav`
   background-color: ${Color.Primary_BG};
 `;
 
-export const Block2Styled = styled.div`
-  align-items: center;
-  width: 80%;
-  height: 50%;
-
-  background-color: ${Color.Primary_BG};
-`;
-
-export const TitleStyled = styled.h3`
+export const Title = styled.h3`
   color: ${Color.Primary_TEXT};
   font-size: 26px;
 
@@ -27,7 +19,7 @@ export const TitleStyled = styled.h3`
     color: ${Color.Green};
   }
 `;
-export const SubTitleStyled = styled.h4`
+export const SubTitle = styled.h4`
   color: ${Color.Primary_TEXT};
   font-size: 20px;
 
@@ -35,7 +27,7 @@ export const SubTitleStyled = styled.h4`
     color: ${Color.Errors};
   }
 `;
-export const TextStyled = styled.p`
+export const Text = styled.p`
   padding: 5px;
   color: ${Color.Primary_light};
   font-size: 20px;

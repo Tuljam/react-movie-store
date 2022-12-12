@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from "./store/hooks/hooks";
 import { getUser } from "./store/selectors/useSelectors";
 import { setUserName, toggleAuth } from "./store/slices/userSlice";
 import { IMovie } from "./types";
+import { AppStyled } from "./ui/globalStyles";
 
 type ThemeType = "dark" | "light";
 
@@ -16,10 +17,14 @@ export const App = () => {
   // theme
 
   const [theme, setTheme] = useState<ThemeType>("dark");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("theme", theme);
+  }, [theme]);
   const handleTheme = () => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
   };
-
+  // user
   const { name, email, isAuth } = useAppSelector(getUser);
   const dispatch = useAppDispatch();
 
@@ -52,18 +57,14 @@ export const App = () => {
       .then(setMovies);
   }, []);
 
-  useEffect(() => {
-    document.documentElement.setAttribute("theme", theme);
-  }, [theme]);
-
   return (
-    <div>
+    <AppStyled>
       <Search {...search} />
       <Nav />
       <button onClick={handleTheme}>Theme</button>
 
       <button onClick={handleAuth}>toggle Auth</button>
       <MoviesList movies={movies} />
-    </div>
+    </AppStyled>
   );
 };

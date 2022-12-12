@@ -1,17 +1,21 @@
 import React from "react";
+import { MovieCardStyled, Title, Image } from "./syles";
 
 interface IProps {
   id: string;
   title: string;
+  year: string;
   img: string;
   genre: string;
 }
-export const MovieCard = ({ title, img, genre }: IProps) => {
+export const MovieCard = ({ id, title, img, genre, year }: IProps) => {
   return (
-    <li>
-      <h2>{title}</h2>
-      <h3>{genre}</h3>
-      <img src={img} alt={title} />
-    </li>
+    <MovieCardStyled>
+      <Image src={img} alt={title} />
+      <Title>
+        {title}, {year}
+      </Title>
+      <Title>{genre}</Title>
+    </MovieCardStyled>
   );
 };
