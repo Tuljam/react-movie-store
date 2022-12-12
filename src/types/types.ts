@@ -14,7 +14,7 @@ export interface IMovieAPI {
   Poster: string;
   Genre: string;
 }
-export interface IMovieInfoAPI {
+export interface IMovieFactsAPI {
   Title: string;
   Year: string;
   Rated: string;

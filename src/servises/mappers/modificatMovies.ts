@@ -1,7 +1,7 @@
 import React from "react";
-import { IMovie, IMovieAPI } from "../../types";
+import { IMovie, IMovieFactsAPI } from "../../types";
 
-export const modificationMovies = (movies: IMovieAPI[]): IMovie[] =>
+export const modificatMovies = (movies: IMovieFactsAPI[]): IMovie[] =>
   movies.map(({ Title, Year, Type, Poster, imdbID, Genre }) => ({
     imdbID: imdbID,
     title: Title,

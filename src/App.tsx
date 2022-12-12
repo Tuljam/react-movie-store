@@ -4,16 +4,22 @@ import { Nav } from "./components/Nav/Nav";
 import { Search } from "./components/Search/Search";
 import { useInput } from "./hooks/useInput";
 import { moviesApi } from "./servises";
-import { modificationMovies } from "./servises/mappers/modificationMovies";
+import { modificatMovies } from "./servises/mappers/modificatMovies";
 import { useAppDispatch, useAppSelector } from "./store/hooks/hooks";
-import { getUser } from "./store/selectors/useeSelectors";
+import { getUser } from "./store/selectors/useSelectors";
 import { setUserName, toggleAuth } from "./store/slices/userSlice";
-
 import { IMovie } from "./types";
 
 type ThemeType = "dark" | "light";
 
 export const App = () => {
+  // theme
+
+  const [theme, setTheme] = useState<ThemeType>("dark");
+  const handleTheme = () => {
+    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
+  };
+
   const { name, email, isAuth } = useAppSelector(getUser);
   const dispatch = useAppDispatch();
 
@@ -27,7 +33,7 @@ export const App = () => {
   // const [movies, setMovies] = useState<IMovie>();
 
   // useEffect(() => {
-  //   moviesApi.getMovies("id").then((movies) => {
+  //   moviesApi.getMoviesById("id").then((movies) => {
   //     console.log(movies);
   //     setMovies(movies as any);
   //   });
@@ -35,22 +41,16 @@ export const App = () => {
 
   const [movies, setMovies] = useState<IMovie[]>([]);
   const search = useInput();
+
   useEffect(() => {
     moviesApi
-      .getSearchMovies("ocean", "movie", "Document")
-      .then((data) => {
-        console.log(data);
-        return modificationMovies(data.Search);
+      .getSearchMovies("ocean")
+      .then((moviesList) => {
+        const modificatedMovies = modificatMovies(moviesList);
+        return modificatedMovies;
       })
       .then(setMovies);
   }, []);
-
-  // theme
-
-  const [theme, setTheme] = useState<ThemeType>("dark");
-  const handleTheme = () => {
-    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
-  };
 
   useEffect(() => {
     document.documentElement.setAttribute("theme", theme);
