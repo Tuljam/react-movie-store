@@ -10,7 +10,7 @@ export const SearchStyled = styled.input`
   outline: none;
   color: ${Color.Primary_TEXT};
   &::placeholder {
-    color: ${Color.Secondary};
+    color: ${Color.White};
   }
   &:focus {
     cursor: pointer;

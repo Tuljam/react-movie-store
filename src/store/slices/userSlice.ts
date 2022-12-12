@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface UserState {
   name: string;
@@ -21,8 +21,8 @@ const userSlice = createSlice({
       state.isAuth = !state.isAuth;
     },
     // изменение значения имени юзера
-    setUserName: (state, action) => {
-      state.name = action.payload;
+    setUserName: (state, { payload }: PayloadAction<string>) => {
+      state.name = payload;
     },
   },
 });
