@@ -8,7 +8,11 @@ interface IUserProfile {
 export const UserProfile = ({ name, lastName }: IUserProfile) => {
   return (
     <UserProfileStyled>
-      <UserProfileIcon />
+      <UserProfileIcon>
+        {" "}
+        {name[0]}
+        {lastName[0]}
+      </UserProfileIcon>
       <UserName>
         {name} {lastName}
       </UserName>

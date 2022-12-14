@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SideBar } from "./components";
 import { Header } from "./components/Header/Header";
 import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
@@ -60,8 +61,8 @@ export const App = () => {
 
   return (
     <AppStyled>
+      <SideBar />
       <Header />
-      <Nav />
       <button onClick={handleTheme}>Theme</button>
       <button onClick={handleAuth}>toggle Auth</button>
 
