@@ -7,7 +7,7 @@ export const NavStyled = styled.nav`
   justify-content: center;
   flex-direction: column;
   width: 80%;
-  height: 200px;
+  /* height: 200px; */
   background-color: ${Color.Primary_BG};
 `;
 
@@ -32,5 +32,3 @@ export const Text = styled.p`
   color: ${Color.Primary_light};
   font-size: 20px;
 `;
-
-export const Icon = styled.img``;

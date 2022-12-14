@@ -5,6 +5,9 @@ export const SideBarStyled = styled.aside`
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
   gap: 5px;
+  width: 370px;
+  align-items: center;
+  text-align: center;
 
   ${Media.Tablet} {
     display: none;
@@ -15,8 +18,10 @@ export const SideBarStyled = styled.aside`
 `;
 
 export const Logo = styled.img`
+  margin: auto;
   width: 160px;
   height: 40px;
+
   ${Media.Mobile} {
     width: 147px;
     height: 38px;
