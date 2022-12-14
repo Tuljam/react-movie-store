@@ -1,12 +1,20 @@
-export interface IFilm {
+export interface IMovie {
+  title: string;
+  year: string;
+  imdbID: string;
+  type: string;
+  poster: string;
+  genre: string;
+}
+export interface IMovieAPI {
   Title: string;
   Year: string;
   imdbID: string;
   Type: string;
   Poster: string;
+  Genre: string;
 }
-
-export interface IFilmInfoAPI {
+export interface IMovieFactsAPI {
   Title: string;
   Year: string;
   Rated: string;
@@ -36,6 +44,8 @@ export interface IRating {
   Value: string;
 }
 
-export interface ISearch {
-  Search: IFilm[];
+export interface ResponseAPI {
+  Search: IMovieAPI[];
+  totalResult: string;
+  Response: string;
 }
