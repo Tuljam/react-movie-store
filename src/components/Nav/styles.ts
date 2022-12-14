@@ -32,3 +32,5 @@ export const Text = styled.p`
   color: ${Color.Primary_light};
   font-size: 20px;
 `;
+
+export const Icon = styled.img``;
