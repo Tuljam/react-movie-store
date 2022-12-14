@@ -1,6 +1,4 @@
-import { MoviesList } from "./MoviesList/MoviesList";
-import { MovieCard } from "./MovieCard/MovieCard";
-import { Nav } from "./Nav/Nav";
-import { Search } from "./Search/Search";
-
-export { MoviesList, MovieCard, Nav, Search };
+export * from "./MoviesList/MoviesList";
+export * from "./MovieCard/MovieCard";
+export * from "./Nav/Nav";
+export * from "./Search/Search";
