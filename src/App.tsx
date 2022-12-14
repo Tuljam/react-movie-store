@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Header } from "./components/Header/Header";
 import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
 import { Search } from "./components/Search/Search";
@@ -59,11 +60,11 @@ export const App = () => {
 
   return (
     <AppStyled>
-      <Search {...search} />
+      <Header />
       <Nav />
       <button onClick={handleTheme}>Theme</button>
-
       <button onClick={handleAuth}>toggle Auth</button>
+
       <MoviesList movies={movies} />
     </AppStyled>
   );
