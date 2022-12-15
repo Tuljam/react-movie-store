@@ -9,7 +9,8 @@ export const NavLink = () => {
   return (
     <NavLinkStyled href="#">
       <Icon src={homeIcon} alt="Home" />
-      <Text>Home</Text> <Icon src={trendIcon} alt="Trend" />
+      <Text>Home</Text>
+      <Icon src={trendIcon} alt="Trend" />
       <Text>Trends</Text>
       <Icon src={favoriteIcon} alt="Favorites" />
       <Text>Favorites</Text>

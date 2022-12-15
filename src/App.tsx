@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { AppStyled } from "./appWrapp";
 import { SideBar } from "./components";
-import { Header } from "./components/Header/Header";
+import { MainPage } from "./components/MainPage/MainPage";
 import { MoviesList } from "./components/MoviesList/MoviesList";
 import { Nav } from "./components/Nav/Nav";
 import { Search } from "./components/Search/Search";
@@ -10,8 +11,6 @@ import { modificatMovies } from "./servises/mappers/modificatMovies";
 import { useAppDispatch, useAppSelector } from "./store/hooks/hooks";
 import { getUser } from "./store/selectors/useSelectors";
 import { setUserName, toggleAuth } from "./store/slices/userSlice";
-import { IMovie } from "./types";
-import { AppStyled } from "./ui/globalStyles";
 
 type ThemeType = "dark" | "light";
 
@@ -37,7 +36,7 @@ export const App = () => {
   // API
 
   // поиск по ID
-  // const [movies, setMovies] = useState<IMovie>();
+  // const [movies, setMovies] = useState<IMovie[]>([]);
 
   // useEffect(() => {
   //   moviesApi.getMoviesById("id").then((movies) => {
@@ -46,27 +45,27 @@ export const App = () => {
   //   });
   // }, []);
 
-  const [movies, setMovies] = useState<IMovie[]>([]);
-  const search = useInput();
+  // поиск по фильмам
 
-  useEffect(() => {
-    moviesApi
-      .getSearchMovies("ocean")
-      .then((moviesList) => {
-        const modificatedMovies = modificatMovies(moviesList);
-        return modificatedMovies;
-      })
-      .then(setMovies);
-  }, []);
+  // const [movies, setMovies] = useState<IMovie[]>([]);
+  // const search = useInput();
+
+  // useEffect(() => {
+  //   moviesApi
+  //     .getSearchMovies("ocean")
+  //     .then((moviesList) => {
+  //       const modificatedMovies = modificatMovies(moviesList);
+  //       return modificatedMovies;
+  //     })
+  //     .then(setMovies);
+  // }, []);
 
   return (
     <AppStyled>
       <SideBar />
-      <Header />
+      <MainPage />
       <button onClick={handleTheme}>Theme</button>
       <button onClick={handleAuth}>toggle Auth</button>
-
-      <MoviesList movies={movies} />
     </AppStyled>
   );
 };

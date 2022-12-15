@@ -5,7 +5,7 @@ export const NavLinkStyled = styled.a`
   display: grid;
   grid-template-columns: 40px 95px;
   gap: 25px 0;
-  padding-left: 65px;
+  /* padding-left: 65px; */
   padding-right: 106px;
 `;
 export const Text = styled.p`

@@ -20,8 +20,3 @@ html[theme="light"] {
   body{
 
   }`;
-
-export const AppStyled = styled.div`
-  display: grid;
-  background: ${Color.Primary_BG};
-`;
