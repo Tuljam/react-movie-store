@@ -1,16 +1,7 @@
 import { useEffect, useState } from "react";
+import { getUser, toggleAuth, useAppDispatch, useAppSelector } from "store";
 import { AppStyled } from "./appWrapp";
-import { SideBar } from "./components";
-import { MainPage } from "./components/MainPage/MainPage";
-import { MoviesList } from "./components/MoviesList/MoviesList";
-import { Nav } from "./components/Nav/Nav";
-import { Search } from "./components/Search/Search";
-import { useInput } from "./hooks/useInput";
-import { moviesApi } from "./servises";
-import { modificatMovies } from "./servises/mappers/modificatMovies";
-import { useAppDispatch, useAppSelector } from "./store/hooks/hooks";
-import { getUser } from "./store/selectors/useSelectors";
-import { setUserName, toggleAuth } from "./store/slices/userSlice";
+import { MainSection, SideBar } from "./components";
 
 type ThemeType = "dark" | "light";
 
@@ -63,7 +54,7 @@ export const App = () => {
   return (
     <AppStyled>
       <SideBar />
-      <MainPage />
+      <MainSection />
       <button onClick={handleTheme}>Theme</button>
       <button onClick={handleAuth}>toggle Auth</button>
     </AppStyled>

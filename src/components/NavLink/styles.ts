@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Color } from "../../ui";
+import { Color } from "ui";
 
 export const NavLinkStyled = styled.a`
   display: grid;
@@ -13,8 +13,4 @@ export const Text = styled.p`
   color: ${Color.Primary_light};
   font-size: 20px;
   text-align: start;
-`;
-
-export const Icon = styled.img`
-  align-self: center;
 `;

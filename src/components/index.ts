@@ -1,4 +1,4 @@
-export * from "./MainPage/MainPage";
+export * from "./MainSection/MainSection";
 export * from "./MoviesList/MoviesList";
 export * from "./MovieCard/MovieCard";
 export * from "./Nav/Nav";

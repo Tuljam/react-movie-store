@@ -1,20 +1,16 @@
-import React from "react";
-import { Icon, NavLinkStyled, Text } from "./styles";
-import homeIcon from "../../assets/icons/homepage-icons.svg";
-import trendIcon from "../../assets/icons/trendpage-icons.svg";
-import favoriteIcon from "../../assets/icons/favoritepage-icons.svg";
-import settingsIcon from "../../assets/icons/settingpage-icons.svg";
+import { FavoritePageIcon, HomePageIcon, SettingsPageIcon, TrendPageIcon } from "assets";
+import { NavLinkStyled, Text } from "./styles";
 
 export const NavLink = () => {
   return (
     <NavLinkStyled href="#">
-      <Icon src={homeIcon} alt="Home page icon" />
+      <HomePageIcon />
       <Text>Home</Text>
-      <Icon src={trendIcon} alt="Trend page icon" />
+      <TrendPageIcon />
       <Text>Trends</Text>
-      <Icon src={favoriteIcon} alt="Favorites page icon" />
+      <FavoritePageIcon />
       <Text>Favorites</Text>
-      <Icon src={settingsIcon} alt="Settings page icon" />
+      <SettingsPageIcon />
       <Text>Settings</Text>
     </NavLinkStyled>
   );

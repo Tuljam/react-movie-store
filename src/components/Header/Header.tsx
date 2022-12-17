@@ -1,7 +1,6 @@
-import React from "react";
-import { useInput } from "../../hooks";
-import { Search } from "../Search/Search";
-import { UserProfile } from "../UserProfile/UserProfile";
+import { Search } from "components/Search/Search";
+import { UserProfile } from "components/UserProfile/UserProfile";
+import { useInput } from "hooks";
 import { HeaderStyled } from "./styles";
 
 export const Header = () => {

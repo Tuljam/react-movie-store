@@ -1,5 +1,4 @@
-import React from "react";
-import { MovieCardStyled, Image, SubTitle, Title } from "./syles";
+import { MovieCardStyled, Title, SubTitle, Image } from "./styles";
 
 interface IProps {
   id: string;

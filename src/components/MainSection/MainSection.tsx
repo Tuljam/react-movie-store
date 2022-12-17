@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { useInput } from "../../hooks";
-import { moviesApi } from "../../servises";
-import { modificatMovies } from "../../servises/mappers/modificatMovies";
-import { useAppDispatch } from "../../store";
-import { IMovie } from "../../types";
-import { Header } from "../Header/Header";
-import { MoviesList } from "../MoviesList/MoviesList";
+import { Header } from "components/Header/Header";
+import { MoviesList } from "components/MoviesList/MoviesList";
+import { useInput } from "hooks";
+import { useEffect, useState } from "react";
+import { moviesApi } from "servises";
+import { modificatMovies } from "servises/mappers/modificatMovies";
+import { useAppDispatch } from "store";
+import { IMovie } from "types";
 
-export const MainPage = () => {
+export const MainSection = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
   const search = useInput();
   const dispatch = useAppDispatch(); // нужно ли здесь??

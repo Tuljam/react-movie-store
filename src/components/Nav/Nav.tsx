@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
+import { NavLink } from "components/NavLink/NavLink";
 import { useSelector } from "react-redux";
-import { Media } from "../../ui";
-import { NavLink } from "../NavLink/NavLink";
-
-import { NavStyled, SubTitle, Text, Title } from "./styles";
+import { NavStyled } from "./styles";
 
 export const Nav = () => {
   const { name, email, isAuth } = useSelector((state: any) => state.user);

@@ -1,5 +1,5 @@
-import { IMovie } from "../../types";
-import { MovieCard } from "../MovieCard/MovieCard";
+import { MovieCard } from "components/MovieCard/MovieCard";
+import { IMovie } from "types";
 import { ListStyled } from "./styles";
 interface IProps {
   movies: IMovie[];

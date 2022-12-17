@@ -1,12 +1,11 @@
-import React from "react";
-import { Nav } from "../Nav/Nav";
-import { Copyright, Logo, SideBarStyled } from "./styles";
-import logo from "../../assets/images/logo.png";
+import { Logo } from "assets";
+import { Nav } from "components/Nav/Nav";
+import { SideBarStyled, Copyright } from "./styles";
 
 export const SideBar = () => {
   return (
     <SideBarStyled>
-      <Logo src={logo} alt="Logo" />
+      <Logo />
       <Nav />
       <Copyright>© All Rights Reserved</Copyright>
     </SideBarStyled>

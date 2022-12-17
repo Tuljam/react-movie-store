@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
-import { setUserName } from "../../store/slices/userSlice";
+import { setUserName } from "store";
 import { SearchStyled } from "./styles";
 
 interface IProps {
