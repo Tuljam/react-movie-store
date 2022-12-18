@@ -4,8 +4,7 @@ import { Color, Media, typography } from "../../ui";
 export const SideBarStyled = styled.aside`
   display: grid;
   grid-template-rows: 0.5fr 3fr 1fr;
-  padding-left: 65px;
-  padding-right: 40px;
+  padding: 45px 60px 65px 60px;
   align-items: start;
   text-align: start;
   background-color: ${Color.Black};
