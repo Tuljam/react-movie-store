@@ -51,8 +51,8 @@ export const SubTitle = styled.h6`
     color: ${Color.Errors};
   }
 `;
-export const Text = styled.p`
-  padding: 5px;
-  color: ${Color.Primary_light};
-  ${typography.s3};
-`;
+// export const Text = styled.p`
+//   padding: 5px;
+//   color: ${Color.Primary_light};
+//   ${typography.s3};
+// `;

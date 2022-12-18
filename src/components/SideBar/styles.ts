@@ -3,12 +3,12 @@ import { Color, Media, typography } from "../../ui";
 
 export const SideBarStyled = styled.aside`
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
-  gap: 5px;
-  width: 370px;
+  grid-template-rows: 0.5fr 3fr 1fr;
   padding-left: 65px;
+  padding-right: 40px;
   align-items: start;
   text-align: start;
+  background-color: ${Color.Black};
 
   ${Media.Tablet} {
     display: none;
@@ -19,7 +19,6 @@ export const SideBarStyled = styled.aside`
 `;
 
 export const Logo = styled.img`
-  /* margin: auto; */
   width: 160px;
   height: 40px;
   align-items: start;

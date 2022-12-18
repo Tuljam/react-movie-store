@@ -24,7 +24,11 @@ export const UserProfileIcon = styled.div`
 `;
 
 export const UserName = styled.p`
-  ${typography.b};
-
   align-self: center;
+  ${typography.b};
+  color: ${Color.Primary_TEXT};
+
+  ${Media.Tablet} {
+    color: ${Color.Errors};
+  }
 `;
