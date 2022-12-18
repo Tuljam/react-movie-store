@@ -3,19 +3,7 @@ import { getUser, toggleAuth, useAppDispatch, useAppSelector } from "store";
 import { AppStyled } from "./appWrapp";
 import { MainSection, SideBar } from "./components";
 
-type ThemeType = "dark" | "light";
-
 export const App = () => {
-  // theme
-
-  const [theme, setTheme] = useState<ThemeType>("dark");
-
-  useEffect(() => {
-    document.documentElement.setAttribute("theme", theme);
-  }, [theme]);
-  const handleTheme = () => {
-    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
-  };
   // user
   const { name, email, isAuth } = useAppSelector(getUser);
   const dispatch = useAppDispatch();
@@ -55,7 +43,7 @@ export const App = () => {
     <AppStyled>
       <SideBar />
       <MainSection />
-      <button onClick={handleTheme}>Theme</button>
+
       <button onClick={handleAuth}>toggle Auth</button>
     </AppStyled>
   );

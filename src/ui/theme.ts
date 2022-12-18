@@ -2,8 +2,7 @@ import { css } from "styled-components";
 import { Color } from "./colors";
 
 export const darkTheme = css`
-  /* --primary-text: ${Color.White}; */
-  --primary-text: #ffffff;
+  --primary-text: ${Color.White};
   --primary-bg: ${Color.Black};
 `;
 
