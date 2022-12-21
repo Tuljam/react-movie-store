@@ -5,6 +5,7 @@ import { SideBarStyled, Copyright } from "./styles";
 export const SideBar = () => {
   return (
     <SideBarStyled>
+      {/* <Logo alt={`poster:Logo`} /> */}
       <Logo />
       <Nav />
       <Copyright>© All Rights Reserved</Copyright>
