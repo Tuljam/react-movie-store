@@ -6,6 +6,7 @@ import { moviesApi } from "servises";
 import { modificatMovies } from "servises/mappers/modificatMovies";
 import { useAppDispatch } from "store";
 import { IMovie } from "types";
+import { MainSectionStyled } from "./styles";
 
 export const MainSection = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
@@ -22,9 +23,9 @@ export const MainSection = () => {
       .then(setMovies);
   }, []);
   return (
-    <div>
+    <MainSectionStyled>
       <Header />
       <MoviesList movies={movies} />
-    </div>
+    </MainSectionStyled>
   );
 };
