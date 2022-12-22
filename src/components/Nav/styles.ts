@@ -10,34 +10,13 @@ export const NavStyled = styled.nav`
   background-color: ${Color.Black};
 `;
 
-// export const Title = styled.h3`
-//   color: ${Color.Primary_TEXT};
-//   font-size: 26px;
-
-//   ${Media.Tablet} {
-//     color: ${Color.Green};
-//   }
-// `;
-// export const SubTitle = styled.h4`
-//   color: ${Color.Primary_TEXT};
-//   font-size: 20px;
-
-//   ${Media.Tablet} {
-//     color: ${Color.Errors};
-//   }
-// `;
-// export const Text = styled.p`
-//   padding: 5px;
-//   color: ${Color.Primary_light};
-//   font-size: 20px;
-// `;
-
-export const NavLink = styled.a`
+export const Link = styled.a`
   display: grid;
   grid-template-columns: 40px 95px;
   text-decoration: none;
   padding-right: 105px;
 `;
+
 export const Text = styled.p`
   padding: 5px;
   color: ${Color.Secondary};

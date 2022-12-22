@@ -1,7 +1,5 @@
-import { MainTemplate } from "components/MainTemplate/MainTemplate";
-import { TrendsPage } from "pages";
-import { FavoritesPage } from "pages/FavoritesPage";
-import { HomePage } from "pages/HomePage";
+import { MainTemplate } from "components";
+import { HomePage, FavoritesPage, TrendsPage } from "pages";
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { ROUTE } from "./routes";
 
