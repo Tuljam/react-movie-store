@@ -1,4 +1,3 @@
-import React from "react";
 import { IMovieFactsAPI, IMovie } from "types";
 
 export const modificatMovies = (movies: IMovieFactsAPI[]): IMovie[] =>

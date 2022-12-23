@@ -1,10 +1,9 @@
 import { FavoritePageIcon, HomePageIcon, SettingsPageIcon, TrendPageIcon } from "assets";
+import { CustomNavLink } from "components";
 
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
 import { ROUTE } from "router";
-import { ButtonTheme, NavStyled, Text } from "./styles";
+import { ButtonTheme, NavStyled, Subtitle } from "./styles";
 
 type ThemeType = "dark" | "light";
 
@@ -21,43 +20,22 @@ export const Nav = () => {
   };
   return (
     <NavStyled>
-      {/* <Link to={ROUTE.HOME}>
-        {" "}
+      <CustomNavLink to={ROUTE.HOME}>
         <HomePageIcon />
-        <p>home</p>
-      </Link>
-      <Link to={ROUTE.TRENDS}>
-        {" "}
-        <TrendPageIcon />
-        <p>Trends</p>
-      </Link>
-      <Link to={ROUTE.FAVORITES}>
-        {" "}
-        <FavoritePageIcon />
-        <p>Favorites</p>
-      </Link>
-      <Link to={ROUTE.SETTINGS}>
-        {" "}
-        <SettingsPageIcon />
-        <p>Settings</p>
-      </Link> */}
-
-      {/* <CustomNavLink to={ROUTE.HOME}>
-        <HomePageIcon />
-        <p>home</p>
-      </CustomNavLink>
-      <CustomNavLink to={ROUTE.FAVORITES}>
-        <FavoritePageIcon />
-        <p>favorites</p>
+        <Subtitle>Home</Subtitle>
       </CustomNavLink>
       <CustomNavLink to={ROUTE.TRENDS}>
         <TrendPageIcon />
-        <p>Trends</p>
+        <Subtitle>Trends</Subtitle>
+      </CustomNavLink>
+      <CustomNavLink to={ROUTE.FAVORITES}>
+        <FavoritePageIcon />
+        <Subtitle>Favorites</Subtitle>
       </CustomNavLink>
       <CustomNavLink to={ROUTE.SETTINGS}>
         <SettingsPageIcon />
-        <p>Settindg</p>
-      </CustomNavLink> */}
+        <Subtitle>Settings</Subtitle>
+      </CustomNavLink>
 
       <ButtonTheme onClick={handleTheme}>Theme</ButtonTheme>
     </NavStyled>

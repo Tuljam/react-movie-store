@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Color } from "./ui";
+import { Color } from "ui";
 
-export const AppStyled = styled.div`
+export const MainTemplateStyled = styled.div`
   display: grid;
   grid-template-columns: 300px 1fr;
   gap: 30px;

@@ -20,7 +20,14 @@ class MoviesApi {
     return data;
   }
 
-  // Promise<Array<IMovieFactsAPI>>
+  //   public async getSearchMovies(keyword: string) {
+  //     const { data } = await this.API.get<ResponseAPI>("", {
+  //       params: { s: keyword },
+  //     });
+
+  //     return data;
+  //   }
+  // }
   public async getSearchMovies(keyword: string): Promise<IMovieFactsAPI[]> {
     const { data } = await this.API.get<ResponseAPI>("", {
       params: { s: keyword },
