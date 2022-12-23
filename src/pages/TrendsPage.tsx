@@ -1,6 +1,5 @@
-import { AppStyled } from "appWrapp";
-import { MainSection, SideBar } from "components";
+import { MainTemplateStyled } from "components/MainTemplate/styles";
 
 export const TrendsPage = () => {
-  return <AppStyled>trends</AppStyled>;
+  return <MainTemplateStyled>trends</MainTemplateStyled>;
 };
