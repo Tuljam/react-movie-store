@@ -6,10 +6,6 @@ import { darkTheme, lightTheme } from "./theme";
 export const GlobalStyles = createGlobalStyle`
 ${resetCSS};
 #root {
-  display: flex;
-  /* flex-direction: row;
-  justify-content: center; */
-  align-items: center;
   width: 1920px;
   min-height: 100vh;
 
