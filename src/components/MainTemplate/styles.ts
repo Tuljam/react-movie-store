@@ -12,7 +12,6 @@ export const MainTemplateStyled = styled.div`
     "aside outlet";
   min-height: 100vh;
   /* width: 1920px; */
-  background: ${Color.Primary_BG};
 `;
 
 export const Outlet = styled.div`

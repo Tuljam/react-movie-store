@@ -2,8 +2,10 @@ import styled from "styled-components";
 import { Color, Media, typography } from "../../ui";
 
 export const MovieCardStyled = styled.li`
-  max-width: 265px;
-  max-height: 430px;
+  /* max-width: 265px;
+  max-height: 430px; */
+  width: 265px;
+  height: 430px;
   ${Media.Tablet} {
     max-width: 210px;
     max-height: 380px;

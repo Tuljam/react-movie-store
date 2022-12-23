@@ -7,6 +7,7 @@ export const NavLinkStyled = styled(NavLink)<{ $isActive: PathMatch<string> | nu
   grid-template-columns: 50px 1fr;
   justify-content: space-around;
   align-items: center;
+  text-decoration: none;
   font-size: 18px;
   color: ${({ $isActive }) => ($isActive ? `${Color.Primary}` : `${Color.Secondary}`)};
   &:hover {
