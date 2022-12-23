@@ -1,5 +1,4 @@
 export * from "./MainTemplate/MainTemplate";
-export * from "./MainSection/MainSection";
 export * from "./MoviesList/MoviesList";
 export * from "./MovieCard/MovieCard";
 export * from "./Nav/Nav";

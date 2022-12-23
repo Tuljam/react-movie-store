@@ -1,11 +1,12 @@
-import { MainSection, SideBar } from "components";
+import { MoviesList } from "components";
 import { MainTemplateStyled } from "components/MainTemplate/styles";
 import React from "react";
 
 export const HomePage = () => {
   return (
     <MainTemplateStyled>
-      <MainSection />
+      {/* <MainSection /> */}
+      <MoviesList />
     </MainTemplateStyled>
   );
 };
