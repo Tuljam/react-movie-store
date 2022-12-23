@@ -5,7 +5,6 @@ import React from "react";
 export const HomePage = () => {
   return (
     <MainTemplateStyled>
-      {/* <MainSection /> */}
       <MoviesList />
     </MainTemplateStyled>
   );

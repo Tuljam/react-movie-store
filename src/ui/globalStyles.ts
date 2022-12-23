@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
 ${resetCSS};
 #root {
   width: 1920px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
 }
 html {
