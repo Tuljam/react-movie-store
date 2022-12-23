@@ -8,8 +8,6 @@ import { MainSectionStyled } from "./styles";
 
 export const MainSection = () => {
   const [movies, setMovies] = useState<IMovie[]>([]);
-  // const search = useInput();
-  // const dispatch = useAppDispatch(); // нужно ли здесь??
 
   useEffect(() => {
     moviesApi
@@ -22,7 +20,6 @@ export const MainSection = () => {
   }, []);
   return (
     <MainSectionStyled>
-      <Header />
       <MoviesList movies={movies} />
     </MainSectionStyled>
   );

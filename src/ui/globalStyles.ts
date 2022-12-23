@@ -4,7 +4,11 @@ import { darkTheme, lightTheme } from "./theme";
 
 export const GlobalStyles = createGlobalStyle`
 ${resetCSS};
+#root {
+  width: 1920px;
+  min-height: 100vh;
 
+}
 html {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -16,6 +20,4 @@ html[theme="light"] {
   ${lightTheme}
 }
   
-  body{
-
-  }`;
+`;

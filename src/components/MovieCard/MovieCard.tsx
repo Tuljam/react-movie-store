@@ -6,7 +6,7 @@ interface IProps {
 }
 export const MovieCard = ({ movie }: IProps) => {
   return (
-    <MovieCardStyled>
+    <MovieCardStyled key={movie.imdbID}>
       <Image src={movie.poster} alt={movie.title} />{" "}
       <Title>
         {movie.title}, {movie.year}{" "}

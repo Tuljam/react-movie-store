@@ -3,18 +3,12 @@ import { Color } from "../../ui";
 
 export const NavStyled = styled.nav`
   display: grid;
+  grid-template-rows: repeat (5, 1fr);
   gap: 40px;
   width: 98%;
   height: 30%;
   background-color: ${Color.Black};
 `;
-
-// export const Link = styled.a`
-//   display: grid;
-//   grid-template-columns: 40px 95px;
-//   text-decoration: none;
-//   padding-right: 105px;
-// `;
 
 export const Subtitle = styled.h5`
   padding: 5px;
@@ -30,9 +24,10 @@ export const Subtitle = styled.h5`
 
 export const ButtonTheme = styled.button`
   padding: 1.25rem 1.75rem;
+  border-radius: 10px;
   background-color: ${Color.Dark};
   color: ${Color.Secondary};
-  border-radius: 10px;
+
   transition: all 0.5s ease-in-out;
 
   &:hover {

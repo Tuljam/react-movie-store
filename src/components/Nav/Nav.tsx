@@ -15,6 +15,7 @@ export const Nav = () => {
   useEffect(() => {
     document.documentElement.setAttribute("theme", theme);
   }, [theme]);
+
   const handleTheme = () => {
     setTheme((theme) => (theme === "dark" ? "light" : "dark"));
   };

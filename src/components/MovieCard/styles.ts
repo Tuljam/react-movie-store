@@ -15,10 +15,10 @@ export const MovieCardStyled = styled.li`
 `;
 
 export const Image = styled.img`
-  width: 100%;
+  /* width: 100%; */
   height: 360px;
   border-radius: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   ${Media.Tablet} {
     width: 210px;
     height: 280px;

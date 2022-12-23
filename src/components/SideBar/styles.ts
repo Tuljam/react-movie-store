@@ -3,8 +3,9 @@ import { Color, Media, typography } from "../../ui";
 
 export const SideBarStyled = styled.aside`
   display: grid;
-  grid-template-rows: 0.5fr 3fr 1fr;
-  padding: 45px 60px 65px 60px;
+  grid-area: aside;
+  grid-template-rows: 0.5fr 3fr 0.5fr;
+  padding: 48px 100px 5px 40px;
   align-items: start;
   text-align: start;
   background-color: ${Color.Black};
@@ -17,10 +18,11 @@ export const SideBarStyled = styled.aside`
   }
 `;
 
-export const Logo = styled.img`
+export const LogoIcon = styled.img`
   width: 160px;
   height: 40px;
-  align-items: start;
+  align-items: center;
+  padding: 50px;
 
   ${Media.Mobile} {
     width: 147px;
@@ -28,7 +30,7 @@ export const Logo = styled.img`
   }
 `;
 export const Copyright = styled.p`
-  align-self: end;
+  align-self: center;
   ${typography.b};
   color: ${Color.Light};
 `;
