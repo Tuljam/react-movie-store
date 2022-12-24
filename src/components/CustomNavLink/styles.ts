@@ -1,6 +1,6 @@
 import { NavLink, PathMatch } from "react-router-dom";
 import styled from "styled-components";
-import { Color } from "ui";
+import { Color, typography } from "ui";
 
 export const NavLinkStyled = styled(NavLink)<{ $isActive: PathMatch<string> | null }>`
   display: grid;
@@ -8,7 +8,7 @@ export const NavLinkStyled = styled(NavLink)<{ $isActive: PathMatch<string> | nu
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
-  font-size: 18px;
+  ${typography.s1}
   color: ${({ $isActive }) => ($isActive ? `${Color.Primary}` : `${Color.Secondary}`)};
   &:hover {
     color: ${Color.Primary};

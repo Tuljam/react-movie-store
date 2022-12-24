@@ -10,3 +10,4 @@ export * from "./CustomNavLink/CustomNavLink";
 export * from "./SignInForm/SignInForm";
 export * from "./Search/Search";
 export * from "./Title/Title";
+export * from "./Button/Button";
