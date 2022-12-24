@@ -7,3 +7,6 @@ export * from "./Header/Header";
 export * from "./UserProfile/UserProfile";
 export * from "./SideBar/SideBar";
 export * from "./CustomNavLink/CustomNavLink";
+export * from "./SignInForm/SignInForm";
+export * from "./Search/Search";
+export * from "./Title/Title";
