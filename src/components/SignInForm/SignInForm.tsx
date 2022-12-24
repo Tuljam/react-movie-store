@@ -11,10 +11,12 @@ export const SignInForm = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
     watch,
   } = useForm<ISingIn>();
   // watch((data) => console.log(data));
   const onSubmit: SubmitHandler<ISingIn> = (data) => {
+    reset();
     return data;
   };
 
