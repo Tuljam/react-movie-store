@@ -7,6 +7,7 @@ import { SearchPage } from "./SearchPage";
 import { UserPassWordPage } from "./UserPassWordPage";
 import { SignInPage } from "./SignInPage";
 import { SignUpPage } from "./SignUpPage";
+import { DetailsMoviePage } from "./DetailsMoviePage";
 
 export {
   HomePage,
@@ -18,4 +19,5 @@ export {
   UserPassWordPage,
   SignInPage,
   SignUpPage,
+  DetailsMoviePage,
 };

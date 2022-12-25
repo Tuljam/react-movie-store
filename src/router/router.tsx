@@ -9,6 +9,7 @@ import {
   UserPassWordPage,
   SignInPage,
   SignUpPage,
+  DetailsMoviePage,
 } from "pages";
 import { SearchPage } from "pages/SearchPage";
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
@@ -19,11 +20,12 @@ export const router = createBrowserRouter(
     <Route path={ROUTE.HOME} element={<MainTemplate />}>
       <Route index element={<HomePage />} />
       <Route path={ROUTE.TRENDS} element={<TrendsPage />} />
-      {/* private route */}
 
+      {/* private route */}
       <Route path={ROUTE.FAVORITES} element={<RequareAuth />}>
         <Route path={ROUTE.FAVORITES} element={<FavoritesPage />} />
       </Route>
+      {/*  */}
 
       <Route path={ROUTE.SETTINGS} element={<SettingsPage />} />
       <Route path={ROUTE.MOVIE_CARD} element={<MovieCardPage />} />
@@ -31,6 +33,7 @@ export const router = createBrowserRouter(
       <Route path={ROUTE.PASSWORD} element={<UserPassWordPage />} />
       <Route path={ROUTE.SIGN_IN} element={<SignInPage />} />
       <Route path={ROUTE.SIGN_UP} element={<SignUpPage />} />
+      <Route path={ROUTE.DETAILS} element={<DetailsMoviePage />} />
     </Route>,
   ),
 );
