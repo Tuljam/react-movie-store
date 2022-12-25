@@ -3,7 +3,7 @@ import { CustomNavLink } from "components";
 
 import { useEffect, useState } from "react";
 import { ROUTE } from "router";
-import { ButtonTheme, NavStyled, Subtitle } from "./styles";
+import { ButtonTheme, NavStyled } from "./styles";
 
 type ThemeType = "dark" | "light";
 
@@ -23,19 +23,19 @@ export const Nav = () => {
     <NavStyled>
       <CustomNavLink to={ROUTE.HOME}>
         <HomePageIcon />
-        <Subtitle>Home</Subtitle>
+        Home
       </CustomNavLink>
       <CustomNavLink to={ROUTE.TRENDS}>
         <TrendPageIcon />
-        <Subtitle>Trends</Subtitle>
+        Trends
       </CustomNavLink>
       <CustomNavLink to={ROUTE.FAVORITES}>
         <FavoritePageIcon />
-        <Subtitle>Favorites</Subtitle>
+        Favorites
       </CustomNavLink>
       <CustomNavLink to={ROUTE.SETTINGS}>
         <SettingsPageIcon />
-        <Subtitle>Settings</Subtitle>
+        Settings
       </CustomNavLink>
 
       <ButtonTheme onClick={handleTheme}>Theme</ButtonTheme>

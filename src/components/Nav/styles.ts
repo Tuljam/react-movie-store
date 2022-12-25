@@ -10,17 +10,17 @@ export const NavStyled = styled.nav`
   background-color: ${Color.Black};
 `;
 
-export const Subtitle = styled.h5`
-  padding: 5px;
-  color: ${Color.Secondary};
-  font-size: 20px;
-  text-align: start;
-  transition: all 0.5s ease-in-out;
+// export const Subtitle = styled.h5`
+//   padding: 5px;
+//   color: ${Color.Secondary};
+//   font-size: 20px;
+//   text-align: start;
+//   transition: all 0.5s ease-in-out;
 
-  &:hover {
-    color: ${Color.Primary};
-  }
-`;
+//   &:hover {
+//     color: ${Color.Primary};
+//   }
+// `;
 
 export const ButtonTheme = styled.button`
   padding: 1.25rem 1.75rem;

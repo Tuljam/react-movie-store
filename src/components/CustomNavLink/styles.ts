@@ -9,7 +9,7 @@ export const NavLinkStyled = styled(NavLink)<{ $isActive: PathMatch<string> | nu
   align-items: center;
   text-decoration: none;
   ${typography.s1}
-  color: ${({ $isActive }) => ($isActive ? `${Color.Primary}` : `${Color.Secondary}`)};
+  color: ${({ $isActive }) => ($isActive ? `${Color.Primary}` : `${Color.Graphite}`)};
   &:hover {
     color: ${Color.Primary};
   }
