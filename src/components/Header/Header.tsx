@@ -8,7 +8,6 @@ export const Header = () => {
   const search = useInput();
   return (
     <HeaderStyled>
-      {/* <LogoIcon /> */}
       <Search {...search} />
       <UserProfile name="Happy" lastName="NewYear" />
     </HeaderStyled>
