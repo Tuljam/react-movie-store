@@ -12,4 +12,4 @@ export * from "./Search/Search";
 export * from "./Title/Title";
 export * from "./Button/Button";
 
-export * from "./ButtonBack/ButtonBack";
+export * from "./DetailsMovie/DetailsMovie";
