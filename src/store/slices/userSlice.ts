@@ -4,29 +4,34 @@ interface UserState {
   name: string;
   email: string;
   isAuth: boolean;
+  error?: string;
 }
 
 const initialState: UserState = {
-  name: "Lozhka",
-  email: "Vilka",
-  isAuth: false, //user по умолчанию не авторизирован
+  name: "",
+  email: "",
+  isAuth: false, //user по умолчанию не авторизирован - или undefined???
+  error: undefined,
 };
 
 const userSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    // изменение значения авторизации юзера с true на false
-    toggleAuth: (state) => {
-      state.isAuth = !state.isAuth;
+    setUserEmail: (state, { payload }: PayloadAction<string>) => {
+      state.email = payload;
     },
     // изменение значения имени юзера
     setUserName: (state, { payload }: PayloadAction<string>) => {
       state.name = payload;
+    },
+
+    setAuthByUser: (state, { payload }: PayloadAction<boolean>) => {
+      state.isAuth = payload;
     },
   },
 });
 
 export default userSlice.reducer;
 
-export const { toggleAuth, setUserName } = userSlice.actions;
+export const { setUserEmail, setUserName, setAuthByUser } = userSlice.actions;

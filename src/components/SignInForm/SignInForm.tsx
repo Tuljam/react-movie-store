@@ -1,20 +1,16 @@
 import { Button } from "components";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { ISingIn } from "types";
 import { CustomLink, FormStyled, Input, InputGroup, Label, Error, Title, Refer } from "./styles";
 
-interface ISingIn {
-  Email: string;
-  Password: string;
-}
 export const SignInForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-    watch,
   } = useForm<ISingIn>();
-  // watch((data) => console.log(data));
+
   const onSubmit: SubmitHandler<ISingIn> = (data) => {
     reset();
     return data;
@@ -26,7 +22,7 @@ export const SignInForm = () => {
       <InputGroup>
         <Label>Email</Label>
         <Input
-          {...register("Email", {
+          {...register("email", {
             required: "Email is required field.",
             pattern: {
               value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
@@ -36,11 +32,11 @@ export const SignInForm = () => {
           type="text"
           placeholder="Your email"
         />
-        <Error>{errors.Email && errors.Email.message}</Error>
+        <Error>{errors.email && errors.email.message}</Error>
 
         <Label> Password</Label>
         <Input
-          {...register("Password", {
+          {...register("password", {
             required: "Password is required field.",
             minLength: {
               value: 5,
@@ -50,7 +46,7 @@ export const SignInForm = () => {
           type="password"
           placeholder="Your password"
         />
-        <Error>{errors.Password && errors.Password.message}</Error>
+        <Error>{errors.password && errors.password.message}</Error>
         <CustomLink to="/">Foggot password?</CustomLink>
       </InputGroup>
       <Button type="submit">Sign in</Button>

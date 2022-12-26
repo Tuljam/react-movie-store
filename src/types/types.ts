@@ -49,3 +49,10 @@ export interface ResponseAPI {
   totalResult: string;
   Response: string;
 }
+
+export interface ISingIn {
+  name: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
