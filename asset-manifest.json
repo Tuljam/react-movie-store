@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/react-movie-store/static/js/main.85e3c859.js",
+    "static/media/logo.svg": "/react-movie-store/static/media/logo.98872547ad1fb3bcb1bcb7c9f2da64ec.svg",
+    "static/media/settingspage.svg": "/react-movie-store/static/media/settingspage.e1f555e8bb2e46aced03d2a8a0bce609.svg",
+    "static/media/homepage.svg": "/react-movie-store/static/media/homepage.30d24757cceda8a2ca855eb8d1e909c0.svg",
+    "static/media/trendpage.svg": "/react-movie-store/static/media/trendpage.04315be8902a80d43ebed26df83de0f1.svg",
+    "static/media/favoritepage.svg": "/react-movie-store/static/media/favoritepage.c62a0b6d6f21c5576bfa1696e179ddea.svg",
+    "index.html": "/react-movie-store/index.html",
+    "main.85e3c859.js.map": "/react-movie-store/static/js/main.85e3c859.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.85e3c859.js"
+  ]
+}
