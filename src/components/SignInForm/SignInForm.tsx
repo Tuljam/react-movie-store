@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router";
 import { ROUTE } from "router";
-import { loginUser, useTypedDispatch, useTypedSelector } from "store";
+import { loginByUser, useTypedDispatch, useTypedSelector } from "store";
 
 import {
   CustomLink,
@@ -40,7 +40,7 @@ export const SignInForm = () => {
   }, [isAuth, navigate]);
 
   const onSubmit: SubmitHandler<ISignInForm> = (data) => {
-    dispatch(loginUser(data));
+    dispatch(loginByUser(data));
     reset();
   };
 

@@ -34,8 +34,23 @@ const userSlice = createSlice({
       state.isAuth = payload;
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(registerByUser.fulfilled, (state, action) => {
+      state.error = undefined;
+      state.isAuth = true;
+      state.name = action.payload.name;
+      state.email = action.payload.email;
+    });
+    builder.addCase(registerByUser.rejected, (state, action) => {
+      state.error = action.payload;
+    });
+
+    builder.addCase(loginByUser.rejected, (state, action) => {
+      state.error = action.payload;
+    });
+  },
 });
-export const registerUser = createAsyncThunk<
+export const registerByUser = createAsyncThunk<
   { name: string; email: string; uid: string },
   IUserRegisterRequest,
   { rejectValue: string }
@@ -55,7 +70,7 @@ export const registerUser = createAsyncThunk<
   }
 });
 
-export const loginUser = createAsyncThunk<void, IUserLoginRequest, { rejectValue: string }>(
+export const loginByUser = createAsyncThunk<void, IUserLoginRequest, { rejectValue: string }>(
   "users/login",
   async (payload, { rejectWithValue }) => {
     try {
@@ -69,18 +84,18 @@ export const loginUser = createAsyncThunk<void, IUserLoginRequest, { rejectValue
         }
       }
 
-      return rejectWithValue("Error");
+      return rejectWithValue("Unknown Error");
     }
   },
 );
 
-export const logoutUser = createAsyncThunk<void, void, { rejectValue: string }>(
+export const logoutByUser = createAsyncThunk<void, void, { rejectValue: string }>(
   "users/logout",
   async (payload, { rejectWithValue }) => {
     try {
       await logout();
     } catch (error) {
-      return rejectWithValue("Error");
+      return rejectWithValue("Unknown Error");
     }
   },
 );
