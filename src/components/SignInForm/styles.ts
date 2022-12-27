@@ -3,15 +3,8 @@ import { Color, Media, typography } from "ui";
 import { Link } from "react-router-dom";
 
 export const SignInFormStyled = styled.form`
-  background: url("../../assets/images/bg-SignUp.png") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
   display: flex;
   flex-direction: column;
-  width: 60%;
   gap: 40px;
   padding: 60px;
   border-radius: 10px;

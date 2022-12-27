@@ -1,4 +1,5 @@
 export * from "./MainTemplate/MainTemplate";
+export * from "./SignInTemplate/SignInTemplate";
 export * from "./MoviesList/MoviesList";
 export * from "./MovieCard/MovieCard";
 export * from "./Nav/Nav";

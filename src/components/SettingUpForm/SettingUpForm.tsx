@@ -1,8 +1,14 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { ROUTE } from "router";
-import { ISingIn } from "types";
 import { Input, Label, SettingUpFormStyled } from "./styles";
+
+interface ISingIn {
+  name: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
 
 export const SettingUpForm = () => {
   const {

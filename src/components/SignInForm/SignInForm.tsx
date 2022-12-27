@@ -40,8 +40,8 @@ export const SignInForm = () => {
   }, [isAuth, navigate]);
 
   const onSubmit: SubmitHandler<ISignInForm> = (data) => {
-    reset();
     dispatch(loginUser(data));
+    reset();
   };
 
   return (
