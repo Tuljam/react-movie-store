@@ -1,6 +1,6 @@
 # Pixema
 
-[Watch me](https://tuljam.github.io/react-movie-store/)
+[Watch me](https://tuljam.github.io/)
 
 ## Description
 
