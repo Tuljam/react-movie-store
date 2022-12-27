@@ -19,7 +19,7 @@ export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route element={<MainTemplate />}>
-        <Route index element={<HomePage />} />
+        <Route path={ROUTE.HOME} element={<HomePage />} />
         <Route path={ROUTE.TRENDS} element={<TrendsPage />} />
 
         {/* private route */}
