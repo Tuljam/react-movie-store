@@ -1,34 +1,13 @@
-import styled from "styled-components";
-import { Color, Media, typography } from "ui";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { Color, typography } from "ui";
 
-export const SignInFormStyled = styled.form`
-  background: url("../../assets/images/bg-SignUp.png") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  gap: 40px;
-  padding: 60px;
-  border-radius: 10px;
-  color: ${Color.White};
-
-  ${Media.Mobile} {
-    padding: 25px;
-    gap: 30px;
-  }
-`;
-export const InputGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  ${Media.Mobile} {
-    gap: 20px;
-  }
+export const SettingUpFormStyled = styled.form`
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-row-gap: 15px;
+  width: 70%;
+  margin: 0 auto;
 `;
 
 export const Input = styled.input`
@@ -71,7 +50,7 @@ export const CustomLink = styled(Link)`
   text-decoration: none;
 `;
 
-export const ErrorMessage = styled.span`
+export const Error = styled.span`
   ${typography.b};
   color: ${Color.Errors};
 `;

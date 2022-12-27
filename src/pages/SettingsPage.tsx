@@ -1,3 +1,9 @@
+import { SettingUpForm } from "components/SettingUpForm/SettingUpForm";
+
 export const SettingsPage = () => {
-  return <div>SettingsPage</div>;
+  return (
+    <div>
+      <SettingUpForm />
+    </div>
+  );
 };

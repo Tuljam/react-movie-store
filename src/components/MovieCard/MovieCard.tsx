@@ -1,7 +1,7 @@
 import { generatePath, Link } from "react-router-dom";
 import { ROUTE } from "router";
 import { IMovie } from "types";
-import { MovieCardStyled, Title, SubTitle, Image } from "./styles";
+import { MovieCardStyled, SubTitle, Image } from "./styles";
 
 interface IProps {
   movie: IMovie;

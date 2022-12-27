@@ -12,4 +12,5 @@ export * from "./Search/Search";
 export * from "./Title/Title";
 export * from "./Button/Button";
 
+export * from "./SettingUpForm/SettingUpForm";
 export * from "./DetailsMovie/DetailsMovie";

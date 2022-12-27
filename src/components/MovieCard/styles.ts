@@ -32,7 +32,9 @@ export const Image = styled.img`
   }
 `;
 
-export const Title = styled.h5`
+// не работает стили, нужен а или link идт h5?????
+export const Link = styled.h4`
+  text-decoration: none;
   color: ${Color.Primary_TEXT};
   ${typography.s2};
   transition: 0.5s color ease-in-out;

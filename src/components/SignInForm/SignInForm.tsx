@@ -1,23 +1,52 @@
 import { Button } from "components";
+import { useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { ISingIn } from "types";
-import { CustomLink, FormStyled, Input, InputGroup, Label, Error, Title, Refer } from "./styles";
+import { useNavigate } from "react-router";
+import { ROUTE } from "router";
+import { loginUser, useTypedDispatch, useTypedSelector } from "store";
 
+import {
+  CustomLink,
+  Input,
+  InputGroup,
+  Label,
+  Title,
+  Refer,
+  SignInFormStyled,
+  ErrorMessage,
+} from "./styles";
+
+interface ISignInForm {
+  email: string;
+  password: string;
+}
 export const SignInForm = () => {
+  const dispatch = useTypedDispatch();
+  const navigate = useNavigate();
+  const errorServer = useTypedSelector((state) => state.user.error);
+  const isAuth = useTypedSelector((state) => state.user.isAuth);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<ISingIn>();
+  } = useForm<ISignInForm>();
 
-  const onSubmit: SubmitHandler<ISingIn> = (data) => {
+  useEffect(() => {
+    if (isAuth) {
+      navigate(ROUTE.HOME);
+    }
+  }, [isAuth, navigate]);
+
+  const onSubmit: SubmitHandler<ISignInForm> = (data) => {
     reset();
-    return data;
+    dispatch(loginUser(data));
   };
 
   return (
-    <FormStyled onSubmit={handleSubmit(onSubmit)}>
+    <SignInFormStyled onSubmit={handleSubmit(onSubmit)}>
+      {errorServer && <span className={"server-errors"}>{errorServer}</span>}
       <Title> Sign In </Title>
       <InputGroup>
         <Label>Email</Label>
@@ -32,7 +61,7 @@ export const SignInForm = () => {
           type="text"
           placeholder="Your email"
         />
-        <Error>{errors.email && errors.email.message}</Error>
+        <ErrorMessage>{errors.email && errors.email.message}</ErrorMessage>
 
         <Label> Password</Label>
         <Input
@@ -46,7 +75,7 @@ export const SignInForm = () => {
           type="password"
           placeholder="Your password"
         />
-        <Error>{errors.password && errors.password.message}</Error>
+        <ErrorMessage>{errors.password && errors.password.message}</ErrorMessage>
         <CustomLink to="/">Foggot password?</CustomLink>
       </InputGroup>
       <Button type="submit">Sign in</Button>
@@ -55,6 +84,6 @@ export const SignInForm = () => {
       <CustomLink to="/">
         Don’t have an account? <Refer href="/">Sign Up</Refer>{" "}
       </CustomLink>
-    </FormStyled>
+    </SignInFormStyled>
   );
 };
