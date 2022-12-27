@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { Color, Media, typography } from "../../ui";
 
-export const MovieCardStyled = styled.li`
-  /* max-width: 265px;
-  max-height: 430px; */
+export const MovieCardStyled = styled.figure`
   width: 265px;
   height: 430px;
   ${Media.Tablet} {
@@ -17,7 +15,6 @@ export const MovieCardStyled = styled.li`
 `;
 
 export const Image = styled.img`
-  /* width: 100%; */
   height: 360px;
   border-radius: 20px;
   margin-bottom: 15px;
@@ -32,11 +29,15 @@ export const Image = styled.img`
   }
 `;
 
-// не работает стили, нужен а или link идт h5?????
-export const Link = styled.h4`
-  text-decoration: none;
+export const TitleGgoup = styled.figcaption`
   color: ${Color.Primary_TEXT};
   ${typography.s2};
+`;
+// не работает стили, нужен а или link или h5?????
+export const Link = styled.a`
+  text-decoration: none;
+  /* color: ${Color.Primary_TEXT};
+  ${typography.s2}; */
   transition: 0.5s color ease-in-out;
   &:hover {
     color: ${Color.Green};
@@ -47,10 +48,7 @@ export const Link = styled.h4`
     color: ${Color.Green};
   }
 `;
-export const SubTitle = styled.h6`
-  color: ${Color.Primary_TEXT};
-  ${typography.s3};
-
+export const SubTitle = styled.p`
   ${Media.Tablet} {
     color: ${Color.Errors};
   }

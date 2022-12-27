@@ -1,7 +1,7 @@
 import { generatePath, Link } from "react-router-dom";
 import { ROUTE } from "router";
 import { IMovie } from "types";
-import { MovieCardStyled, SubTitle, Image } from "./styles";
+import { MovieCardStyled, SubTitle, Image, TitleGgoup } from "./styles";
 
 interface IProps {
   movie: IMovie;
@@ -13,10 +13,12 @@ export const MovieCard = ({ movie }: IProps) => {
       {/* <Title>
         {movie.title}, {movie.year}{" "}
       </Title> */}
-      <Link to={generatePath(ROUTE.DETAILS, { name: movie.title })}>
-        {movie.title}, {movie.year}{" "}
-      </Link>
-      <SubTitle>{movie.genre}</SubTitle>{" "}
+      <TitleGgoup>
+        <Link to={generatePath(ROUTE.DETAILS, { name: movie.title })}>
+          {movie.title}, {movie.year}{" "}
+        </Link>
+        <SubTitle>{movie.genre}</SubTitle>{" "}
+      </TitleGgoup>
     </MovieCardStyled>
   );
 };

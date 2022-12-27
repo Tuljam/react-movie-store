@@ -22,6 +22,6 @@ html[theme="light"] {
 }
   
 body {
-   background: ${Color.Primary_BG};
+   /* background: ${Color.Primary_BG}; */
 }
 `;

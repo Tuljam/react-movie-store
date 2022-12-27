@@ -1,23 +1,21 @@
 import { ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
-// import { setUserName } from "store";
+import { setKeyword } from "store/searchSlice/searchSlice";
+
 import { SearchStyled } from "./styles";
 
-interface IProps {
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
-  value: string;
-}
-export const Search = ({ onChange, value }: IProps) => {
+export const Search = () => {
   const dispatch = useDispatch();
-  const handleName = (event: ChangeEvent<HTMLInputElement>) => {
-    // dispatch(setUserName(event.target.value));
+  const onChange = (keyword: string) => {
+    dispatch(setKeyword(keyword));
   };
   return (
     <SearchStyled
-      onChange={handleName}
+      onChange={(event) => {
+        onChange(event.target.value);
+      }}
       type="search"
       placeholder="Search"
-      // value={value}
     />
   );
 };
