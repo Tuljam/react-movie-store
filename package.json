@@ -2,7 +2,7 @@
   "name": "react-movie-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tuljam.github.io/",
+  "homepage": "https://tuljam.github.io/react-movie-store/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@testing-library/jest-dom": "^5.16.5",
