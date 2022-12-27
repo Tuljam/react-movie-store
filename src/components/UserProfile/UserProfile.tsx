@@ -1,4 +1,3 @@
-import React from "react";
 import { UserName, UserProfileIcon, UserProfileStyled } from "./styles";
 
 interface IUserProfile {
