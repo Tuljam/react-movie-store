@@ -1,5 +1,5 @@
 export enum ROUTE {
-  HOME = "/ https://tuljam.github.io/react-movie-store/",
+  HOME = "https://tuljam.github.io/react-movie-store/",
   FAVORITES = "favorites",
   TRENDS = "trends",
   SETTINGS = "settings",
