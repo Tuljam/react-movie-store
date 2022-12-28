@@ -1,2 +1,2 @@
 export * from "./MoviesApi";
-export * from "./mappers/modificatMovies";
+export * from "./mappers/transformMovies";

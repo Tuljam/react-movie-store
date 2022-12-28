@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 import { useDispatch } from "react-redux";
-import { setKeyword } from "store/searchSlice/searchSlice";
+import { setKeyword } from "store/feature/searchSlice/searchSlice";
 
 import { SearchStyled } from "./styles";
 
