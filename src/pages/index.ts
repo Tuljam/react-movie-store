@@ -1,13 +1,13 @@
-import { HomePage } from "./HomePage";
-import { TrendsPage } from "./TrendsPage";
-import { FavoritesPage } from "./FavoritesPage";
-import { SettingsPage } from "./SettingsPage";
-import { MovieCardPage } from "./MovieCardPage";
-import { SearchPage } from "./SearchPage";
-import { UserPassWordPage } from "./UserPassWordPage";
-import { SignInPage } from "./SignInPage";
-import { SignUpPage } from "./SignUpPage";
-import { DetailsMoviePage } from "./DetailsMoviePage";
+import { HomePage } from "./HomePage/HomePage";
+import { TrendsPage } from "./TrendsPage/TrendsPage";
+import { FavoritesPage } from "./FavoritesPage/FavoritesPage";
+import { SettingsPage } from "./SettingsPage/SettingsPage";
+import { MovieCardPage } from "./MoviCardPage/MovieCardPage";
+import { SearchPage } from "./SearchPage/SearchPage";
+import { UserPassWordPage } from "./UserPassWordPage/UserPassWordPage";
+import { SignInPage } from "./SignInPage/SignInPage";
+import { SignUpPage } from "./SignUpPage/SignUpPage";
+import { DetailsMoviePage } from "./DetalisMoviePage/DetailsMoviePage";
 
 export {
   HomePage,

@@ -3,8 +3,8 @@ import { SignInTemplateStyled } from "components/SignInTemplate/styles";
 
 export const SignInPage = () => {
   return (
-    <SignInTemplateStyled>
+    <div>
       <SignInForm />
-    </SignInTemplateStyled>
+    </div>
   );
 };

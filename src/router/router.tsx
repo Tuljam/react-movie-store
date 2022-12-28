@@ -11,7 +11,7 @@ import {
   SignUpPage,
   DetailsMoviePage,
 } from "pages";
-import { SearchPage } from "pages/SearchPage";
+import { SearchPage } from "pages/SearchPage/SearchPage";
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { ROUTE } from "router";
 

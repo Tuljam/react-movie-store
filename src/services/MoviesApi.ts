@@ -20,25 +20,25 @@ class MoviesApi {
     return data;
   }
 
-  //   public async getSearchMovies(keyword: string) {
-  //     const { data } = await this.API.get<ResponseAPI>("", {
-  //       params: { s: keyword },
-  //     });
-
-  //     return data;
-  //   }
-  // }
-  public async getSearchMovies(keyword: string): Promise<IMovieFactsAPI[]> {
+  public async getSearchMovies(keyword: string) {
     const { data } = await this.API.get<ResponseAPI>("", {
       params: { s: keyword },
     });
-    if (data.Response === "False") {
-      return [];
-    }
 
-    const moviesIds = data.Search.map((movie) => movie.imdbID);
-    return Promise.all(moviesIds.map((id) => this.getMoviesById(id)));
+    return data;
   }
 }
+//   public async getSearchMovies(keyword: string): Promise<IMovieFactsAPI[]> {
+//     const { data } = await this.API.get<ResponseAPI>("", {
+//       params: { s: keyword },
+//     });
+//     if (data.Response === "False") {
+//       return [];
+//     }
+
+//     const moviesIds = data.Search.map((movie) => movie.imdbID);
+//     return Promise.all(moviesIds.map((id) => this.getMoviesById(id)));
+//   }
+// }
 
 export const moviesApi = new MoviesApi();
