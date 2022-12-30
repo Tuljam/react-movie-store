@@ -8,14 +8,14 @@ interface UserState {
   name: string;
   email: string;
   isAuth: boolean;
-  error?: string;
+  error?: null;
 }
 
 const initialState: UserState = {
-  name: "",
-  email: "",
-  isAuth: false, //user по умолчанию не авторизирован - или undefined???
-  error: undefined,
+  name: "unknown",
+  email: "unknown",
+  isAuth: false, //user по умолчанию не авторизирован
+  error: null,
 };
 
 const userSlice = createSlice({
@@ -36,20 +36,21 @@ const userSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(registerByUser.fulfilled, (state, action) => {
-      state.error = undefined;
+      state.error = null;
       state.isAuth = true;
       state.name = action.payload.name;
       state.email = action.payload.email;
     });
-    builder.addCase(registerByUser.rejected, (state, action) => {
-      state.error = action.payload;
+    builder.addCase(registerByUser.rejected, (state) => {
+      state.error = null;
     });
 
-    builder.addCase(loginByUser.rejected, (state, action) => {
-      state.error = action.payload;
+    builder.addCase(loginByUser.rejected, (state) => {
+      state.error = null;
     });
   },
 });
+
 export const registerByUser = createAsyncThunk<
   { name: string; email: string; uid: string },
   IUserRegisterRequest,

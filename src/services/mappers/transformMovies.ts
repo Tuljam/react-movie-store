@@ -1,6 +1,6 @@
-import { IMovieFactsAPI, IMovie } from "types";
+import { IMovie, IMovieDetailsAPI } from "types";
 
-export const transformMovies = (movies: IMovieFactsAPI[]): IMovie[] =>
+export const transformMovies = (movies: IMovieDetailsAPI[]): IMovie[] =>
   movies.map(({ Title, Year, Type, Poster, imdbID, Genre }) => ({
     imdbID: imdbID,
     title: Title,

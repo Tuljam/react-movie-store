@@ -34,7 +34,7 @@ export const router = createBrowserRouter(
         <Route path={ROUTE.PASSWORD} element={<UserPassWordPage />} />
         <Route path={ROUTE.SIGN_IN} element={<SignInPage />} />
         <Route path={ROUTE.SIGN_UP} element={<SignUpPage />} />
-        <Route path={ROUTE.DETAILS} element={<DetailsMoviePage />} />
+        {/* <Route path={ROUTE.DETAILS} element={<DetailsMoviePage />} /> */}
       </Route>
       ,
     </Route>,

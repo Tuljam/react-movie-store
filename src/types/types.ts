@@ -14,7 +14,7 @@ export interface IMovieAPI {
   Poster: string;
   Genre: string;
 }
-export interface IMovieFactsAPI {
+export interface IMovieDetailsAPI {
   Title: string;
   Year: string;
   Rated: string;
@@ -29,7 +29,6 @@ export interface IMovieFactsAPI {
   Country: string;
   Awards: string;
   Poster: string;
-  Ratings: IRating[];
   Metascore: string;
   imdbRating: string;
   imdbVotes: string;
@@ -37,11 +36,6 @@ export interface IMovieFactsAPI {
   Type: string;
   DVD: string;
   BoxOffice: string;
-}
-
-export interface IRating {
-  Source: string;
-  Value: string;
 }
 
 export interface ResponseAPI {

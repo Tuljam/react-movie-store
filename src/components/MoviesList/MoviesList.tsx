@@ -4,6 +4,7 @@ import { ListStyled } from "./styles";
 
 interface IProps {
   movies: IMovie[];
+  isLoading: boolean;
 }
 export const MoviesList = ({ movies }: IProps) => {
   return (
@@ -22,7 +23,7 @@ export const MoviesList = ({ movies }: IProps) => {
 //     moviesApi
 //       .getSearchMovies("ocean")
 //       .then((moviesList) => {
-//         const modificatedMovies = modificatMovies(moviesList);
+//         const modificatedMovies = transformMovies(moviesList);
 //         return modificatedMovies;
 //       })
 //       .then(setMovies);
